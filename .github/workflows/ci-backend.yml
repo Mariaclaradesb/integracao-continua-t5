@@ -6,15 +6,16 @@ on:
       - 'main'
     paths: 
       - 'sgcmapi/**'
-  workflow_dispatch:
+  workflow_dispatch: #habilita o botão run workflow lá no actions
   workflow_call:
+  pull_request: 
 
 jobs:
-  build:
+  compile:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout #nome dos steps
+        uses: actions/checkout@v4 #caminho para acesso via $GITHUB_WORKSPACE
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
