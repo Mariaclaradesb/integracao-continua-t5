@@ -9,6 +9,8 @@ on:
   workflow_dispatch: #habilita o botão run workflow lá no actions
   workflow_call:
   pull_request: 
+    paths: 
+      - 'sgcmapi/**'
 
 jobs:
   compile:
